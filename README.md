@@ -11,8 +11,6 @@
   - `GET /api/legacy/clients` — Returns a list of legacy clients.
   - `POST /api/migrate/{id}` — Migrates a client to the new system.
   - `GET /api/new/clients` — Returns a list of migrated clients.
-- In-memory storage (no database required)
-- Simple error handling (e.g., migrating an already migrated client)
 - Logs successful migrations
 
 ### Run Backend
