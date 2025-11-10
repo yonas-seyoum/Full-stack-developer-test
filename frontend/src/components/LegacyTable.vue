@@ -3,18 +3,18 @@
     <v-data-table
       :headers="headers"
       :items="clients"
-      item-key="id"
+      item-value="id"
+      class="mx-auto"
       dense
       :loading="loading"
       loading-text="Loading clients..."
       hide-default-footer
-      class="mx-auto"
-      show-select
     >
+
       <template #item.migrated="{ item }">
         <v-chip
-          :color="item.migrated ? 'success' : '#f44336'"
-          small
+          :color="item.migrated ? 'success' : 'error'"
+          size="small"
           class="white--text text-center"
           rounded
         >
@@ -24,7 +24,7 @@
 
       <template #item.actions="{ item }">
         <v-btn
-          small
+          size="small"
           color="primary"
           :disabled="item.migrated"
           class="mx-auto"
@@ -35,7 +35,7 @@
       </template>
 
       <template #no-data>
-          No legacy clients found.
+        No legacy clients found.
       </template>
     </v-data-table>
   </v-card>
@@ -45,12 +45,12 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
-const headers = [
-  { text: 'ID', value: 'id', align: 'center' },
-  { text: 'Name', value: 'name', align: 'center' },
-  { text: 'Migrated', value: 'migrated', align: 'center' },
-  { text: 'Actions', value: 'actions', align: 'center' },
-]
+const headers = ref([
+  { title: 'ID', key: 'id', align: 'center' },
+  { title: 'Name', key: 'name', align: 'center' },
+  { title: 'Migrated', key: 'migrated', align: 'center' },
+  { title: 'Actions', key: 'actions', align: 'center' },
+])
 
 const clients = ref([])
 const loading = ref(false)

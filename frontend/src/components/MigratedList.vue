@@ -25,8 +25,8 @@ const migrated = ref([])
 const loading = ref(false)
 
 const headers = [
-  { text: 'ID', value: 'id', align: 'center' },
-  { text: 'Name', value: 'name', align: 'center' },
+  { title: 'ID', key: 'id', align: 'center' },
+  { title: 'Name', key: 'name', align: 'center' },
 ]
 
 async function fetchMigrated() {
