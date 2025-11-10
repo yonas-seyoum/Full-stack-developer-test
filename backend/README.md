@@ -1,5 +1,3 @@
-# Full-stack-developer-test
-
 
 ---
 
@@ -25,7 +23,7 @@ cd backend
 
 2. Build the project:
 ```bash
-./mvnw clean install -DskipTests
+./mvnw clean install
 ```
 3. Run the application:
 
@@ -34,31 +32,3 @@ cd backend
 ```
 
 4. The API runs on http://localhost:8080 by default.
-
-
----
-
-### Frontend
-
----
-
-## Run Frontend
-
-1. Navigate to the frontend folder:
-
-```bash
-cd frontend
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Run the development server:
-
-```bash
-npm run dev
-```
-
